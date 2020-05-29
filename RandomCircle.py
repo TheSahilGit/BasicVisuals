@@ -1,3 +1,7 @@
+### This code  draws 'Random Non Overlapping Circles'.###
+### Sahil Islam ###
+### Date: 28/05/2020 ###
+
 import pygame
 import numpy as np
 import random
@@ -16,18 +20,18 @@ clock = pygame.time.Clock()
 pygame.display.set_caption("Random Circle")
 
 
-def circle(x, y, r):
+def circle(x, y, r): #Defining a function that draws a circle with centre at (x,y) and radius r.
     pygame.draw.circle(display_surface, red, (int(x), int(y)), int(r), 2)
 
 
-def distance(x1, y1, x2, y2):
+def distance(x1, y1, x2, y2):  #Defining a function that calculates distance between two points (x1,y1) and (x2,y2).
     dsq = (x1 - x2) ** 2 + (y1 - y2) ** 2
     d = np.sqrt(dsq)
     return d
 
 
 display_surface.fill(black)
-n = 250
+n = 250  #This is the number o circles.
 circleList = []
 while (len(circleList) < n):
 
@@ -56,9 +60,3 @@ while not exit:
         if event.type == pygame.QUIT:
             pygame.quit()
             quit()
-
-'''if x[j] > x[i] + 2 * r[i] and y[i] < y[j] and y[j] + 2 * r[j] < y[i] + 2 * r[j] or x[j] + 2 * r[j] <= x[
-                i] and \
-                    y[j] > y[i] and y[j] + 2 * r[j] < y[i] + 2 * y[i] or x[j] > x[i] and x[j] + 2 * r[j] < x[i] + 2 * r[
-                i] and y[j] + 2 * r[j] < y[i] or x[j] > x[i] and x[j] + 2 * r[j] < x[i] + 2 * r[i] and y[j] > y[i] + 2 * \
-                    r[i] or x[i] < 0 or x[i] + 2 * r[i] > display_width or y[i] < 0 or y[i] + 2 * r[i] > display_height:'''
