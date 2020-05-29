@@ -1,3 +1,7 @@
+### This code  draws 'Fractal Tree' using a recursive function.###
+### Sahil Islam ###
+### Date: 20/05/2020 ###
+
 import pygame
 import numpy as np
 import math
