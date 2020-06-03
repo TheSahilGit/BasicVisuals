@@ -38,7 +38,7 @@ def listingPrimeNums(nMax):
     return primeNums
 
 
-def naturalNum(nMax):
+def listingNaturalNum(nMax):
     naturalNumbers = []
     for i in range(nMax):
         naturalNumbers.append(i + 1)
@@ -58,7 +58,7 @@ def converter(list):
 
 nMax=500000
 
-naturalNum = naturalNum(nMax)
+naturalNum = listingNaturalNum(nMax)
 
 
 primeNum = listingPrimeNums(nMax)
