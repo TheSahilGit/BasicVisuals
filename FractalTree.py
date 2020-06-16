@@ -21,14 +21,14 @@ clock = pygame.time.Clock()
 pygame.display.set_caption("Fractal Tree")
 
 
-def recursion_loop(x1, y1, l, theta):
-    if l > 14:
+def recursion_loop(x1, y1, l, theta):   #This is th recursive function. It does the main trick.
+    if l > 14:                          #Termination condition.
         x2 = x1 + l * math.cos(theta * math.pi / 180.)
         y2 = y1 - l * math.sin(theta * math.pi / 180.)
 
         pygame.draw.line(display_surface, red, (x1, y1), (x2, y2), 2)
 
-        recursion_loop(x2, y2, l * 0.85, theta + 15)
+        recursion_loop(x2, y2, l * 0.85, theta + 15)    #Calling the function inside it with slightly varied argument. 
         recursion_loop(x2, y2, l * 0.85, theta - 15)
 
 
@@ -36,11 +36,12 @@ def recursion_loop(x1, y1, l, theta):
 
 display_surface.fill(black)
 
+#Initialization
 l = 100
 theta = 90
 x1 = display_width / 2
 y1 = display_height
-
+#
 
 recursion_loop(x1, y1, l, theta)
 
