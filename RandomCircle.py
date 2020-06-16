@@ -32,8 +32,9 @@ def distance(x1, y1, x2, y2):  #Defining a function that calculates distance bet
 
 display_surface.fill(black)
 n = 250  #This is the number o circles.
+
 circleList = []
-while (len(circleList) < n):
+while (len(circleList) < n):    #Thi while loop runs untill it reaches the desired circle number.
 
     r = random.randint(10, 20)
     x = random.randint(r, display_width - r)
@@ -42,7 +43,7 @@ while (len(circleList) < n):
     overlap = False
     for x2, y2, r2 in circleList:
         d = distance(x, y, x2, y2)
-        if d < r + r2:
+        if d < r + r2:      #Overlapping condition.
             overlap = True
             break
 
