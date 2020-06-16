@@ -31,11 +31,13 @@ def circle(x, y, r):
 
 
 def fcos(i, theta):
-    return (70 * 4 / ((2 * i + 1) * math.pi)) * np.cos((2 * i + 1) * theta * math.pi / 180.)
+    scale=70    #Just to scale everything according to the pygame window.
+    return (scale* 4 / ((2 * i + 1) * math.pi)) * np.cos((2 * i + 1) * theta * math.pi / 180.)
 
 
 def fsin(i, theta):
-    return (70 * 4 / ((2 * i + 1) * math.pi)) * np.sin((2 * i + 1) * theta * math.pi / 180.)
+    scale=70
+    return (scale * 4 / ((2 * i + 1) * math.pi)) * np.sin((2 * i + 1) * theta * math.pi / 180.)
 
 
 def calculationLoop(frequency, max_n):
@@ -47,7 +49,7 @@ def calculationLoop(frequency, max_n):
     x = []
     n = max_n
 
-    time = np.arange(display_width / 2. + 100, display_width-50, 0.1)
+    time = np.arange(display_width / 2. + 100, display_width-50, 0.1)   #We plot time as a coordinate here. So it also needs scaling. 
 
     for t in range(len(time)):
         sumY = []
