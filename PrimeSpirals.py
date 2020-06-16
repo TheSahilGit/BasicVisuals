@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-
+#Function for finding a number prime or not.
 def ifprime(num):
     if num > 1:
         for i in range(2, num):
@@ -25,8 +25,9 @@ def ifprime(num):
 
     else:
         return False
+#
 
-
+#Function that stores the prime numbers in a list.
 def listingPrimeNums(nMax):
     primeNums = []
     nonPrimeNums = []
@@ -36,7 +37,7 @@ def listingPrimeNums(nMax):
         else:
             nonPrimeNums.append(i)
     return primeNums
-
+#
 
 def listingNaturalNum(nMax):
     naturalNumbers = []
@@ -44,7 +45,7 @@ def listingNaturalNum(nMax):
         naturalNumbers.append(i + 1)
     return naturalNumbers
 
-
+#Polar to cartesian converter.
 def converter(list):
     cartesianX = []
     cartesianY = []
@@ -55,6 +56,8 @@ def converter(list):
         cartesianX.append(tempx)
         cartesianY.append(tempy)
     return cartesianX, cartesianY
+
+#
 
 nMax=500000
 
