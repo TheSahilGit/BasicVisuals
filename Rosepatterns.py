@@ -11,9 +11,9 @@ import pygame
 def rosePatterns(n, d):
     xs = []
     ys = []
-    k = float(n / d)
+    k = float(n / d)        #Different patterns are generated depending on the value of  k. 
     for theta in np.arange(0, 2 * np.pi * d, 0.001):
-        r = np.cos(k * theta)
+        r = np.cos(k * theta)   #This is the main code for plotting those patterns.
         x = r * np.cos(theta)
         y = r * np.sin(theta)
         xs.append(x)
@@ -57,7 +57,7 @@ def dynamicVisual(n, d):
         display_surface.fill(black)
 
         for i in range(len(xs)):
-            point(scale * xs[i] + xo, scale * ys[i] + yo)
+            point(scale * xs[i] + xo, scale * ys[i] + yo)   #Scaling the values according to the pygame window.
             pygame.display.update()
             clock.tick(500)
 
